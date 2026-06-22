@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --green:#2D4A3E;
+    --red:#C84B31;
+    --gold:#E9B824;
+    --pastel-yellow:#FAF3E0;
+}
+
+*,*::placeholder,*:link{
+    font-family: "DM Sans", sans-serif;
+}

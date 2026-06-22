@@ -1,0 +1,34 @@
+<header class="navbar navbar-expand-lg" style="background-color: var(--green);">
+  <div class="container-fluid">
+
+    <a class="navbar-brand fw-bold" routerLink="/" style="color: var(--gold);">
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="calcao" class="d-inline-block align-text-top">
+        </div>
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            (click)="toggleMenu()"
+            [attr.aria-expanded]="isMenuOpen"
+            style="border-color: rgba(212,168,67,0.5); color: var(--gold);">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [class.show]="isMenuOpen">
+      <ul class="navbar-nav ms-auto gap-3">
+        @for (link of navLinks; track link.path) {
+          <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="link.path"
+               routerLinkActive="active"
+               [routerLinkActiveOptions]="{ exact: true }"
+               style="color: rgba(255,255,255,0.8);">
+              {{ link.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+
+  </div>
+</header>
