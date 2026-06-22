@@ -1,0 +1,31 @@
+.hero {
+  position: relative;
+  flex: 1;
+  background-image: url('/assets/images/hero-restaurant.webp');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+:host {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* Le voile sombre */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* Le contenu passe au-dessus du voile */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
