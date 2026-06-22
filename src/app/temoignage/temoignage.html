@@ -1,0 +1,48 @@
+<section class="py-5 bg-light-subtle">
+  <div class="container">
+    
+    <div class="text-center max-width-md mx-auto mb-5">
+      <span class="badge bg-success-subtle text-success rounded-pill px-3 py-2 fw-semibold uppercase tracking-wider mb-2">Témoignages</span>
+      <h2 class="display-6 fw-bold text-dark">Ce que disent nos gourmets</h2>
+      <p class="text-muted">Découvrez les retours d'expérience de ceux qui ont goûté à nos délices traditionnels.</p>
+    </div>
+
+    <div class="row g-4">
+      
+      @for (testimonial of testimonials; track testimonial.id) {
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0 p-4 card-testimonial">
+            
+            <div class="mb-3 text-warning">
+              @for (star of getStars(testimonial.rating); track $index) {
+                <i class="bi bi-star-fill me-1">★</i>
+              }
+            </div>
+
+            <blockquote class="card-body p-0 mb-4">
+              <p class="card-text text-secondary italic">
+                " {{ testimonial.comment }} "
+              </p>
+            </blockquote>
+
+            <div class="d-flex align-items-center mt-auto pt-3 border-top border-light-subtle">
+              <img [src]="testimonial.avatar" [alt]="testimonial.name" class="rounded-circle object-fit-cover me-3 shadow-sm" style="width: 50px; height: 50px;">
+              <div>
+                <h6 class="mb-0 fw-bold text-dark">{{ testimonial.name }}</h6>
+                <small class="text-success fw-medium d-block mb-1">{{ testimonial.role }}</small>
+                <small class="text-muted fs-7">{{ testimonial.date }}</small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      } @empty {
+        <div class="col-12 text-center py-4 text-muted">
+          Aucun témoignage pour le moment.
+        </div>
+      }
+
+    </div>
+
+  </div>
+</section>
