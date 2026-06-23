@@ -1,14 +1,84 @@
-<section class="hero" >
+<section class="hero">
+  <!-- Fond avec effet parallaxe -->
+  <div class="hero-bg"></div>
+
+  <!-- Voile dégradé -->
   <div class="hero-overlay"></div>
+
+  <!-- Particules flottantes -->
+  <div class="particles" aria-hidden="true">
+    <span class="particle p1">✦</span>
+    <span class="particle p2">✦</span>
+    <span class="particle p3">✦</span>
+    <span class="particle p4">◆</span>
+    <span class="particle p5">✦</span>
+    <span class="particle p6">◆</span>
+    <span class="particle p7">✦</span>
+    <span class="particle p8">✦</span>
+  </div>
+
+  <!-- Contenu principal -->
   <div class="hero-content text-center">
-    <h1 class="display-4 fw-bold" style="color: var(--gold);">
-        Saveurs authentiques du Cameroun
+    <!-- Titre principal -->
+    <h1 class="hero-title">
+      <span class="title-line">Saveurs authentiques</span>
+      <span class="title-line title-accent">du Cameroun</span>
     </h1>
-    <p class="lead" style="color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto;">
-      15 ans de tradition culinaire au cœur de Douala
+
+    <!-- Séparateur décoratif -->
+    <div class="hero-divider" aria-hidden="true">
+      <span class="divider-line"></span>
+      <span class="divider-icon">🌿</span>
+      <span class="divider-line"></span>
+    </div>
+
+    <!-- Sous-titre -->
+    <p class="hero-subtitle">
+      15 ans de tradition culinaire au cœur de Douala — <br class="d-none d-md-block">
+      des recettes transmises de génération en génération.
     </p>
-    <a href="#menu" class="btn btn-lg mt-3" style="background: var(--gold); color: #1a1a1a; font-weight: 700;">
-      Voir le menu
-    </a>
+
+    <!-- Statistiques rapides -->
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number">15+</span>
+        <span class="stat-label">Années</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">50+</span>
+        <span class="stat-label">Plats</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">★ 4.9</span>
+        <span class="stat-label">Avis clients</span>
+      </div>
+    </div>
+
+    <!-- Boutons CTA -->
+    <div class="hero-cta">
+      <a href="#menu" class="btn-primary-hero">
+        <span>Découvrir le menu</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="#horaires" class="btn-secondary-hero">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span>Nos horaires</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Flèche de défilement -->
+  <div class="hero-scroll" aria-label="Défiler vers le bas">
+    <div class="scroll-arrow">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
   </div>
 </section>
