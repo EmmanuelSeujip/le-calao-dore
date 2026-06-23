@@ -1,9 +1,8 @@
 <header class="navbar navbar-expand-lg" style="background-color: var(--green);">
   <div class="container-fluid">
-
-    <a class="navbar-brand fw-bold" routerLink="/" style="color: var(--gold);">
+    <a class="navbar-brand fw-bold" (click)="scrollTo('accueil')" style="color: var(--gold); cursor: pointer;">
         <div class="logo-container">
-            <img src="assets/images/logo.png" alt="calcao" class="d-inline-block align-text-top">
+            <img src="assets/images/logo.png" alt="calao" class="d-inline-block align-text-top">
         </div>
     </a>
 
@@ -16,13 +15,11 @@
 
     <div class="collapse navbar-collapse" [class.show]="isMenuOpen">
       <ul class="navbar-nav ms-auto gap-3">
-        @for (link of navLinks; track link.path) {
+        @for (link of navLinks; track link.anchor) {
           <li class="nav-item">
             <a class="nav-link"
-               [routerLink]="link.path"
-               routerLinkActive="active"
-               [routerLinkActiveOptions]="{ exact: true }"
-               style="color: rgba(255,255,255,0.8);">
+               (click)="scrollTo(link.anchor)"
+               style="color: rgba(255,255,255,0.8); cursor: pointer;">
               {{ link.label }}
             </a>
           </li>

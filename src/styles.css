@@ -8,6 +8,3 @@
 *,*::placeholder,*:link{
     font-family: "DM Sans", sans-serif; 
 }
-body{
-    background-color: var(--pastel-yellow);
-}
