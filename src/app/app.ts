@@ -4,10 +4,11 @@ import { AppHeader } from "./app-header/app-header";
 import { Hero } from "./hero/hero";
 import { Menu } from "./menu/menu";
 import { Temoignage } from "./temoignage/temoignage";
+import { HoraireComponent } from "./horaire-component/horaire-component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AppHeader, Hero, Menu, Temoignage],
+  imports: [RouterOutlet, AppHeader, Hero, Menu, Temoignage, HoraireComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

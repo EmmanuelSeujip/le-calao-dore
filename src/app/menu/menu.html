@@ -37,11 +37,11 @@
           </div>
         </div>
       </div>
-
-      <div *ngIf="filteredItems.length === 0" class="w-100 text-center py-5 text-muted fw-medium">
-        Aucun plat trouvé dans cette catégorie.
-      </div>
-
-    </div>w
+      @if (filteredItems.length === 0) {
+        <div class="w-100 text-center py-5 text-muted fw-medium">
+          Aucun plat trouvé dans cette catégorie.
+        </div>
+      }
+    </div>
   </div>
 </div>
